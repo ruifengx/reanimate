@@ -3,6 +3,7 @@
 {-# LANGUAGE ApplicativeDo     #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE ParallelListComp  #-}
+{-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 module Main(main) where
 
 {- FE articles/demos

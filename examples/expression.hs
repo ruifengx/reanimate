@@ -1,6 +1,7 @@
 #!/usr/bin/env stack
 -- stack runghc --package reanimate
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE StandaloneDeriving #-}
 module Main (main) where
 
 import           Codec.Picture                   (PixelRGBA8 (PixelRGBA8))
@@ -22,7 +23,7 @@ data Expr op v
   = Var v
   | BinOp (Expr op v) op (Expr op v)
   | Paren op (Expr op v) op
-  deriving (Show, Eq)
+  deriving (Show, Eq, Functor)
 
 data Op = Add | Minus | LeftParen | RightParen deriving (Show, Eq)
 
@@ -90,6 +91,10 @@ instance Bitraversable p => Traversable (Both p) where
 
 -- | Make a bifunctor @f (a, -) (b, -)@ (namely @BiAlongside a b f@) out of @f@.
 newtype BiAlongside a b f x y = BiAlongside { runBiAlongside :: f (a, x) (b, y) }
+
+deriving instance Functor (f (a, x)) => Functor (BiAlongside a b f x)
+deriving instance Foldable (f (a, x)) => Foldable (BiAlongside a b f x)
+deriving instance Traversable (f (a, x)) => Traversable (BiAlongside a b f x)
 
 instance Bifunctor p => Bifunctor (BiAlongside a b p) where
   bimap f g = BiAlongside . bimap (second f) (second g) . runBiAlongside

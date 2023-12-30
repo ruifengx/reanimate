@@ -45,16 +45,16 @@ animateFork (Segment (Point startx starty) (Point endx endy))
 -- Helper function to label a proccess with a pid
 labelPids :: Segment -> Int -> SVG
 labelPids (Segment (Point startx starty) (Point _ _)) i = withStrokeWidth (defaultStrokeWidth * 0.5) $ withFillOpacity 1 $ mkGroup
-           [translate (startx - 0.75) (starty) $ scale 0.25 $ outlineText $T.pack("pid: " ++ (show i))]
+           [translate (startx - 0.75) (starty) $ scale 0.25 $ outlineText $ T.pack ("pid: " ++ show i)]
 
 -- Helper function to position a line of text
 mkTextLabel:: [Char] -> Point -> SVG
 mkTextLabel txt (Point startx starty) = withStrokeWidth (defaultStrokeWidth * 0.5) $ withFillOpacity 1 $ mkGroup
-           [translate (startx) (starty) $ scale 0.2 $ outlineText $ T.pack(txt)]
+           [translate (startx) (starty) $ scale 0.2 $ outlineText $ T.pack txt]
 
 mkPrintLabelFromPnt :: Point -> [Char] -> Animation
 mkPrintLabelFromPnt pnt txt = 
-                             oFadeIn $ mkTextLabel ("printf(" ++ (show txt) ++ ")" ) pnt
+                             oFadeIn $ mkTextLabel ("printf(" ++ show txt ++ ")" ) pnt
 -- Helper function to speed up an animation
 speedUpAnimation :: Animation -> Animation
 speedUpAnimation anim = adjustDuration (*0.5) anim 
