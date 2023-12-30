@@ -2,3 +2,7 @@ resolver: lts-22.3
 
 packages:
 - .
+
+extra-deps:
+- git: https://github.com/ruifengx/reanimate-svg.git
+  commit: 5ec2538c8a17d65b46a3a0dd685417a962cbae17

@@ -1,13 +1,6 @@
-[![Hackage](https://img.shields.io/hackage/v/reanimate.svg?color=success)](https://hackage.haskell.org/package/reanimate)
-[![packagename on Stackage LTS](https://stackage.org/package/reanimate/badge/lts)](https://stackage.org/lts/package/reanimate)
-[![packagename on Stackage Nightly](https://stackage.org/package/reanimate/badge/nightly)](https://stackage.org/nightly/package/reanimate)
-[![Build Status](https://dev.azure.com/lemmih0612/reanimate/_apis/build/status/reanimate.reanimate?branchName=master)](https://dev.azure.com/lemmih0612/reanimate/_build/latest?definitionId=2&branchName=master)
-[![Documentation Status](https://readthedocs.org/projects/reanimate/badge/?version=latest)](https://reanimate.readthedocs.io/en/latest/?badge=latest)
 ![Platforms](https://img.shields.io/badge/platform-linux%20%7C%20osx%20%7C%20windows-informational)
 ![GitHub repo size](https://img.shields.io/github/repo-size/reanimate/reanimate)
-[![API docs coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Freanimate.github.io%2Freanimate%2Fhaddock_badge.json)](https://reanimate.github.io/reanimate/haddock.txt)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/reanimate/discord-bot?label=discord-bot)](https://hub.docker.com/repository/docker/reanimate/discord-bot)
-[![Discord](https://img.shields.io/discord/731822102935502908)](https://discord.gg/Qs28Dv6)
+[![Haskell CI](https://github.com/ruifengx/reanimate/actions/workflows/haskell.yml/badge.svg)](https://github.com/ruifengx/reanimate/actions/workflows/haskell.yml)
 
 # Reanimate
 
