@@ -1,6 +1,7 @@
 {-# LANGUAGE ApplicativeDo     #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards   #-}
+{-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 {-|
   Reanimate can automatically synchronize animations to your voice if you have
   a transcript and an audio recording. This works with the help of Gentle

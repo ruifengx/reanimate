@@ -1,6 +1,7 @@
-{-# LANGUAGE BangPatterns #-}
-{-# LANGUAGE MagicHash    #-}
-{-# LANGUAGE PatternSynonyms   #-}
+{-# LANGUAGE BangPatterns    #-}
+{-# LANGUAGE MagicHash       #-}
+{-# LANGUAGE PatternSynonyms #-}
+{-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 {-|
 Module      : Reanimate.GeoProjection
 Copyright   : Written by David Himmelstrup
@@ -72,8 +73,8 @@ import           Data.Vector.Storable    (unsafeWith)
 import qualified Data.Vector.Unboxed     as V
 import           Debug.Trace
 import           Foreign
-import           GHC.Exts                (Double (..), cosDouble#, sinDouble#,
-                                          (*##), (+##), (-##), (/##))
+import           GHC.Exts                (Double (..), cosDouble#, sinDouble#, (*##), (+##), (-##),
+                                          (/##))
 import           Graphics.SvgTree        (pattern None)
 import           Linear                  (distance, lerp)
 import           Linear.V2               hiding (angle)

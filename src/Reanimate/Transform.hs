@@ -1,4 +1,5 @@
 {-# LANGUAGE BangPatterns #-}
+{-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 {-|
   2D transformation matrices capable of translating, scaling,
   rotating, and skewing.
@@ -65,5 +66,4 @@ transformationMatrix transformation =
 -- | Convert a transformation matrix back into an SVG transformation.
 toTransformation :: Matrix Coord -> Transformation
 toTransformation m = TransformMatrix a b c d e f
-  where
-    [a,c,e,b,d,f,_,_,_] = M.toList m
+  where [a,c,e,b,d,f,_,_,_] = M.toList m

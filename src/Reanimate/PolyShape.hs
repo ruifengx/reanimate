@@ -1,4 +1,5 @@
 {-# LANGUAGE CPP #-}
+{-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 {-|
 Module      : Reanimate.PolyShape
 Copyright   : Written by David Himmelstrup
@@ -67,8 +68,8 @@ import           Reanimate.Math.Polygon                               (Polygon, 
 import           Reanimate.Svg
 
 #if !defined(NO_HGEOMETRY)
-import           Control.Lens                                         ((^.))
 import           Algorithms.Geometry.PolygonTriangulation.Triangulate (triangulate')
+import           Control.Lens                                         ((^.))
 
 import           Data.Ext
 import           Data.Geometry.PlanarSubdivision                      (PolygonFaceData (..))
